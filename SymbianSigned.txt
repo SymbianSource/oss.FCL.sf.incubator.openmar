@@ -1,0 +1,27 @@
+#Assigned UIDs
+
+0x2002E1AB	Main application
+0x2002E1AC	KOverlayInterfaceUidValue
+0x2002E1AD	KProviderInterfaceUidValue
+0x2002E1AE	KObjectInterfaceUidValue
+
+# Landmarks
+0x2002E1AF	KDllUidValue / KOverlayImplementationUidValue
+0x2002E1B0	KProviderImplementationUidValue
+0x2002E1B1	KObjectImplementationUidValue
+
+# Geonames
+0x2002E1B2	KDllUidValue / KProviderImplementationUidValue
+0x2002E1B3	KObjectImplementationUidValue
+
+0x2002E1B4
+0x2002E1B5
+0x2002E1B6
+0x2002E1B7
+0x2002E1B8
+0x2002E1B9
+0x2002E1BA
+0x2002E1BB
+0x2002E1BC
+0x2002E1BD
+0x2002E1BE

@@ -1,0 +1,123 @@
+/*
+ * Name        : Application.mmp
+ * Description : Project definition
+ * Project     : This file is part of OpenMAR, an Open Mobile Augmented Reality browser
+ * Website     : http://OpenMAR.org
+ *
+ * Copyright (c) 2010 David Caabeiro
+ *
+ * All rights reserved. This program and the accompanying materials are made available 
+ * under the terms of the Eclipse Public License v1.0 which accompanies this 
+ * distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
+ *
+ */
+
+TARGET          OpenMAR_0x2002E1AB.exe
+TARGETTYPE      exe
+UID             0x100039CE 0x2002E1AB
+
+EPOCSTACKSIZE   0x4000
+EPOCHEAPSIZE    0x100000 0x1000000
+
+MACRO           __DEBUG__
+
+SOURCEPATH      ..\ui\src
+SOURCE          Application.cpp
+SOURCE          AppUi.cpp
+SOURCE          Document.cpp
+
+SOURCE          SplashView.cpp
+SOURCE          SplashContainer.cpp
+
+SOURCE          ARView.cpp
+SOURCE          ARContainer.cpp
+
+SOURCEPATH      ..\engine\src
+SOURCE          Camera.cpp
+SOURCE          ConnectionManager.cpp
+SOURCE          Screenshot.cpp
+SOURCE          SettingManager.cpp
+
+SOURCEPATH      ..\..\common\src
+SOURCE          HttpClient.cpp
+SOURCE          IconLoader.cpp
+SOURCE          Logger.cpp
+
+
+SOURCEPATH      ..\data
+
+START RESOURCE  Application.rss
+HEADER
+TARGET OpenMAR_0x2002E1AB
+TARGETPATH resource\apps
+END //RESOURCE
+
+START RESOURCE	Application_reg.rss
+TARGET OpenMAR_0x2002E1AB_reg
+TARGETPATH 	  \private\10003a3f\apps
+END //RESOURCE
+
+USERINCLUDE     ..\..\common\inc
+USERINCLUDE	    ..\ui\inc
+USERINCLUDE     ..\engine\inc
+
+USERINCLUDE     ..\..\interface
+USERINCLUDE     ..\..\interface\overlay
+USERINCLUDE     ..\..\interface\provider
+
+SYSTEMINCLUDE	 \epoc32\include
+
+LIBRARY         euser.lib
+LIBRARY         apparc.lib
+LIBRARY         cone.lib
+LIBRARY         eikcore.lib
+LIBRARY         eikcoctl.lib
+LIBRARY         eikctl.lib
+LIBRARY         avkon.lib
+LIBRARY         commonengine.lib
+LIBRARY         efsrv.lib
+LIBRARY         estor.lib
+LIBRARY         aknnotify.lib
+
+LIBRARY         ws32.lib
+LIBRARY         gdi.lib
+LIBRARY         bitgdi.lib
+LIBRARY         fbscli.lib
+LIBRARY         egul.lib
+LIBRARY         ImageConversion.lib
+LIBRARY         AknIcon.lib
+
+LIBRARY         hal.lib
+LIBRARY         charconv.lib
+
+LIBRARY         ConnMon.lib
+LIBRARY         CommDb.lib
+LIBRARY         etel3rdparty.lib
+
+LIBRARY         esock.lib
+LIBRARY         http.lib
+LIBRARY         inetprotutil.lib
+LIBRARY         bafl.lib
+LIBRARY         PlatformEnv.lib
+
+LIBRARY         SenXml.lib
+LIBRARY         XmlFramework.lib
+
+LIBRARY         ecam.lib
+LIBRARY         ecamadvsettings.lib
+
+LIBRARY         ecom.lib
+
+LIBRARY         eposlandmarks.lib
+
+
+LANG SC
+
+VENDORID	  	0x700001D2
+SECUREID		0x2002E1AB
+CAPABILITY      LocalServices Location NetworkServices ReadUserData ReadDeviceData SwEvent UserEnvironment WriteDeviceData WriteUserData
+
+#ifdef ENABLE_ABIV2_MODE
+DEBUGGABLE
+#endif
+USERINCLUDE ..\..\interface\object

@@ -1,0 +1,23 @@
+/*
+ * Name        : ImplementationUid.hrh
+ * Description : ECOM implementation UIDs
+ * Project     : This file is part of OpenMAR, an Open Mobile Augmented Reality browser
+ * Website     : http://OpenMAR.org
+ *
+ * Copyright (c) 2010 David Caabeiro
+ *
+ * All rights reserved. This program and the accompanying materials are made available 
+ * under the terms of the Eclipse Public License v1.0 which accompanies this 
+ * distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
+ *
+ */
+
+#ifndef IMPLEMENTATIONUID_HRH_
+#define IMPLEMENTATIONUID_HRH_
+
+#define KDllUidValue                    0x2002E1B2
+
+#define KProviderImplementationUidValue 0x2002E1B2
+#define KObjectImplementationUidValue   0x2002E1B3
+
+#endif

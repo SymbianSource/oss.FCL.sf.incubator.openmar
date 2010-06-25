@@ -1,0 +1,94 @@
+/*
+ * Name        : Geonames.mmp
+ * Description : Project definition
+ * Project     : This file is part of OpenMAR, an Open Mobile Augmented Reality browser
+ * Website     : http://OpenMAR.org
+ *
+ * Copyright (c) 2010 David Caabeiro
+ *
+ * All rights reserved. This program and the accompanying materials are made available 
+ * under the terms of the Eclipse Public License v1.0 which accompanies this 
+ * distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
+ *
+ */
+
+TARGET Geonames_0x2002E1B2.dll
+TARGETTYPE PLUGIN
+
+UID 0x10009D8D 0x2002E1B2
+SECUREID 0x2002E1B2
+
+CAPABILITY  LocalServices Location NetworkServices ReadUserData ReadDeviceData SwEvent UserEnvironment WriteDeviceData WriteUserData //MultimediaDD
+
+MACRO       __DEBUG__
+
+SOURCEPATH  ..\ecom\src
+SOURCE      Proxy.cpp
+
+SOURCEPATH  ..\provider\src
+SOURCE      Provider.cpp
+SOURCE      Loader.cpp
+SOURCE      Entry.cpp
+
+SOURCEPATH  ..\object\src
+SOURCE      Object.cpp
+
+SOURCEPATH  ..\..\..\..\common\src
+SOURCE      HttpClient.cpp
+SOURCE      IconLoader.cpp
+SOURCE      Logger.cpp
+
+USERINCLUDE     ..\..\..\..\interface
+USERINCLUDE     ..\..\..\..\interface\provider
+USERINCLUDE     ..\..\..\..\interface\object 
+
+USERINCLUDE     ..\ecom\inc
+
+USERINCLUDE     ..\provider\inc
+USERINCLUDE     ..\object\inc 
+USERINCLUDE     ..\..\..\..\common\inc 
+
+SYSTEMINCLUDE   \epoc32\include
+
+SOURCEPATH  ..\data
+
+START RESOURCE  Geonames.rss
+    TARGET  Geonames_0x2002E1B2.rsc
+END
+
+LIBRARY         euser.lib
+LIBRARY         eikcore.lib
+LIBRARY         cone.lib
+LIBRARY         ecom.lib
+LIBRARY         avkon.lib
+
+LIBRARY         eposlandmarks.lib
+LIBRARY         hash.lib
+
+LIBRARY         efsrv.lib
+LIBRARY         bafl.lib
+LIBRARY         PlatformEnv.lib
+
+LIBRARY         SenXml.lib
+LIBRARY         XmlFramework.lib
+LIBRARY         charconv.lib
+
+LIBRARY         http.lib
+LIBRARY         inetprotutil.lib
+LIBRARY         esock.lib
+
+LIBRARY         libgles_cm.lib
+LIBRARY         ws32.lib
+
+LIBRARY         bitgdi.lib
+LIBRARY         fbscli.lib
+LIBRARY         gdi.lib
+LIBRARY         egul.lib
+LIBRARY         ImageConversion.lib
+LIBRARY         AknIcon.lib
+
+LIBRARY         CentralRepository.lib
+
+LIBRARY         lbs.lib
+LIBRARY         SensrvClient.lib
+LIBRARY         SensrvUtil.lib

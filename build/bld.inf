@@ -1,0 +1,28 @@
+/*
+ * Name        : bld.inf
+ * Description : Component definition file
+ * Project     : This file is part of OpenMAR, an Open Mobile Augmented Reality browser
+ * Website     : http://OpenMAR.org
+ *
+ * Copyright (c) 2010 David Caabeiro
+ *
+ * All rights reserved. This program and the accompanying materials are made available 
+ * under the terms of the Eclipse Public License v1.0 which accompanies this 
+ * distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
+ *
+ */
+
+PRJ_PLATFORMS
+WINSCW GCCE
+
+PRJ_MMPFILES
+
+gnumakefile ..\browser\group\Icon.mk
+gnumakefile ..\browser\group\Button.mk
+
+..\browser\group\Application.mmp
+
+..\plugin\poi\landmarks\group\Landmarks.mmp
+gnumakefile ..\plugin\poi\landmarks\group\LandmarksIcons.mk
+
+..\plugin\poi\geonames\group\Geonames.mmp

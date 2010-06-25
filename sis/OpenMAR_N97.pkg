@@ -1,0 +1,62 @@
+;/*
+; * Name        : 
+; * Description : 
+; * Project     : This file is part of OpenMAR, an Open Mobile Augmented Reality browser
+; * Website     : http://OpenMAR.org
+; *
+; * Copyright (c) 2010 David Caabeiro
+; *
+; * All rights reserved. This program and the accompanying materials are made available 
+; * under the terms of the Eclipse Public License v1.0 which accompanies this 
+; * distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
+; *
+; */
+
+; Installation file for application
+;
+; This is an auto-generated PKG file by Carbide.
+; This file uses variables specific to Carbide builds that will not work
+; on command-line builds. If you want to use this generated PKG file from the
+; command-line tools you will need to modify the variables with the appropriate
+; values: $(EPOCROOT), $(PLATFORM), $(TARGET)
+;
+;Language - standard language definitions
+&EN
+
+; standard SIS file header
+#{"OpenMAR"},(0x2002E1AB),0,50,0
+
+;Localised Vendor name
+%{"Sequence Point Software S.L."}
+
+;Unique Vendor name
+:""
+
+;Supports N97
+[0x20014DDD],0,0,0,{"Nokia N97"}
+[0x20014DDE],0,0,0,{"Nokia N97"}
+[0x20023766],0,0,0,{"Nokia N97 Mini"}
+
+; Add any installation notes if applicable
+"License.txt"-"",FT,TA
+
+; Main application
+"$(EPOCROOT)Epoc32\release\$(PLATFORM)\$(TARGET)\OpenMAR_0x2002E1AB.exe"    -"!:\sys\bin\OpenMAR_0x2002E1AB.exe"
+"$(EPOCROOT)Epoc32\data\z\resource\apps\OpenMAR_0x2002E1AB.rsc"             -"!:\resource\apps\OpenMAR_0x2002E1AB.rsc"
+"$(EPOCROOT)Epoc32\data\z\private\10003a3f\apps\OpenMAR_0x2002E1AB_reg.rsc" -"!:\private\10003a3f\import\apps\OpenMAR_0x2002E1AB_reg.rsc"
+
+; Icon files
+"$(EPOCROOT)Epoc32\data\z\resource\apps\OpenMAR_0x2002E1AB.mif"             -"!:\resource\apps\OpenMAR_0x2002E1AB.mif"
+"$(EPOCROOT)Epoc32\data\z\resource\apps\Button_0x2002E1AB.mif"              -"!:\resource\apps\Button_0x2002E1AB.mif"
+
+; Required for application to be covered by backup/restore facility
+"..\sis\backup_registration.xml"                                            -"!:\private\2002E1AB\backup_registration.xml"
+
+;Plugins
+"$(EPOCROOT)Epoc32\release\$(PLATFORM)\$(TARGET)\Landmarks_0x2002E1AF.dll"  -"!:\sys\bin\Landmarks_0x2002E1AF.dll"
+"$(EPOCROOT)Epoc32\data\z\resource\plugins\Landmarks_0x2002E1AF.rsc"        -"!:\resource\plugins\Landmarks_0x2002E1AF.rsc"
+"$(EPOCROOT)Epoc32\data\z\resource\apps\Landmarks_0x2002E1AF.mif"           -"!:\resource\apps\Landmarks_0x2002E1AF.mif"
+
+"$(EPOCROOT)Epoc32\release\$(PLATFORM)\$(TARGET)\Geonames_0x2002E1B2.dll"   -"!:\sys\bin\Geonames_0x2002E1B2.dll"
+"$(EPOCROOT)Epoc32\data\z\resource\plugins\Geonames_0x2002E1B2.rsc"         -"!:\resource\plugins\Geonames_0x2002E1B2.rsc"
+;"$(EPOCROOT)Epoc32\data\z\resource\apps\Geonames_0x2002E1B2.mif"            -"!:\resource\apps\Geonames_0x2002E1B2.mif"
